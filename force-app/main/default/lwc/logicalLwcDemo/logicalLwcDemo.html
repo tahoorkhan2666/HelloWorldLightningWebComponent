@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="LOGICAL LWC DEMO"  icon-name="custom:custom4" >
+        <lightning-layout  vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                {greeting}
+            </lightning-layout-item>
+            <template  if:true={message}>
+            <lightning-layout-item padding="around-small">     
+                    {message}
+            </lightning-layout-item>
+            </template>
+
+            <lightning-layout-item padding="around-small">
+                <template  for:each={contacts}   for:item="con"   for:index="index">
+                   <p key = {con.id}>{index}</p>
+                   {con.Name}
+                   {con.Id}
+                </template>
+
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <template  if:true={records}>
+                       I have some values {records}
+                </template>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+               <lightning-button label="Call Apex"  variant="brand" onclick={handleClick}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+    
+</template>

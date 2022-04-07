@@ -1,0 +1,51 @@
+<template>
+   <lightning-card title="Contact List"  icon-name="standard:contact">
+       <lightning-layout  vertical-align="center">
+           <lightning-layout-item padding="around-small">
+               <lightning-input label="Find Contacts" value={searchKey} onchange={handleChange}></lightning-input>
+           </lightning-layout-item>
+       </lightning-layout>
+
+       <lightning-layout vertical-align="center">
+           <template   for:each={contacts} for:item="contact" >
+               <lightning-layout-item padding="around-small" key ={contact.key}>
+                   <p>{contact.Name}</p>
+                   <p><lightning-formatted-email   value={contact.Email}></lightning-formatted-email></p>
+                   <p><lightning-formatted-phone value={contact.Phone}></lightning-formatted-phone></p>
+               </lightning-layout-item>
+           </template>
+       </lightning-layout>
+   </lightning-card>
+
+
+   <!-- Account List-->
+
+   <lightning-card  title="Account List"  icon-name="standard:Account" >
+       <lightning-layout  vertical-align="center">
+           <lightning-layout-item padding="around-small" >
+               <lightning-input label="Find Account" value={searchkeyAccount}  onchange={handleChangeAccount} ></lightning-input>
+           </lightning-layout-item>
+       </lightning-layout>
+
+       <lightning-layout  vertical-align="center">
+         <template for:each={accounts}   for:item="account">
+               <c-account-title account ={account}  key={account.id} ></c-account-title>
+
+             <!--  <lightning-layout-item padding="around-small"  key={account.key}>
+                   <p>{account.Name}</p>
+                   <p>{account.Industry}</p>
+              </lightning-layout-item>  -->
+            </template>
+          <!--  <lightning-layout-item padding="around-small">
+                <c-account-title></c-account-title>
+            </lightning-layout-item>-->
+       </lightning-layout>
+
+       <lightning-layout  vertical-align="center">
+        <lightning-layout-item padding="around-small" >
+            <lightning-button label="Find Account" variant="brand" onclick={findAccount} ></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+   </lightning-card>
+    
+</template>
