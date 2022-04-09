@@ -12,6 +12,10 @@ export default class ContactListDemo extends LightningElement {
     @track accounts;
     @track erroraccount;
 
+    @track selectAccount;
+
+    
+
     @wire(getContactList,{ name : '$searchKey'})
     wiredcontacts({data,error}){
         if(data){
@@ -42,6 +46,16 @@ export default class ContactListDemo extends LightningElement {
               this.erroraccount = error;
         })
     }
+    handleSelectRec(event){
+
+        const recordId = event.detail;
+        console.log('recordId = ',recordId);
+
+        this.selectAccount = this.accounts.find(account => account.Id === recordId);
+
+    }
+
+
 
 
 

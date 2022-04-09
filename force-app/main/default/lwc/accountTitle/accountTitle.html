@@ -1,10 +1,18 @@
 <template>
-    <lightning-card title={account.Name}  icon-name="standard:account">
+   <!-- <lightning-card title={account.Name}  icon-name="standard:account">
         <lightning-layout  vertical-align="center">
             <lightning-layout-item  padding="around-small" >  
                 <p><lightning-formatted-text value={account.Name} ></lightning-formatted-text></p>
                 <p><lightning-formatted-text value={account.Industry}></lightning-formatted-text></p>
             </lightning-layout-item>
         </lightning-layout>
-    </lightning-card>
+    </lightning-card>  -->
+
+    <a href="JavaScript:void[0]" onclick={handleSelect}>
+        <lightning-layout  vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                {account.Name}
+            </lightning-layout-item>
+        </lightning-layout>
+    </a>
 </template>

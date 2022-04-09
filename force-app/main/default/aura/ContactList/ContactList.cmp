@@ -1,0 +1,7 @@
+<aura:component>
+    <aura:attribute name="greeting" type = "String"  default="Lightning Component"></aura:attribute>
+    <h1>I am in Aura Comp</h1>
+    {!v.greeting}
+    <c:contactListDemo></c:contactListDemo>
+
+</aura:component>	

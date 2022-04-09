@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Design Attribute"  icon-name="standard:account">
+        <div class="slds-p-around_x-small">
+            {greeting} 
+            {heading}
+            {message}
+    
+            <p>{label.testLabel}</p>
+    
+            <p><img src={label.testResource1} /></p>
+    
+            <p>{label.userId}</p>
+    
+            <p>{label.ACCOUNT_OBJECT.objectApiName}</p>
+    
+            <lightning-layout vertical-align="center">
+                <lightning-layout-item padding="around-small">
+                    {label.lang}
+                </lightning-layout-item>
+    
+                <lightning-layout-item padding="around-small">
+                    {label.locale}
+                </lightning-layout-item>
+    
+                <lightning-layout-item padding="around-small">
+                    {label.currency}
+                </lightning-layout-item>
+    
+                <lightning-layout-item padding="around-small">
+                    {label.timeZone}
+                </lightning-layout-item>
+            </lightning-layout>
+
+
+            
+        </div>
+ 
+    </lightning-card>
+    
+</template>
